@@ -43,7 +43,7 @@ Console.WriteLine ($"Сумма элементов на нечетных инд�
 int[] GetArray (int size, int minVal, int maxVal)
 {
     int[] res  = new int[size];
-    for(int i = 0; i < size; i++)
+    for(int i = 1; i < size; i++)
     {
         res[i] = new Random().Next (minVal, maxVal);
     }
