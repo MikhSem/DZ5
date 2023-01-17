@@ -66,14 +66,13 @@ int[] arrayFinal = new int[a];
 for (int i = 0; i < a; i++)
 
 {
-    arrayFinal [i] = array3 [i] * array3 [(sizemas2 - 1 - i)];
+    arrayFinal [i] = array3 [i] * array3 [sizemas2 - 1 - i];
 }
-
 
  Console.WriteLine ($"[{String.Join (" / ", arrayFinal)}]");
 
 
-// ------ Метод задача  1, 2, 3 --------
+// ------ Метод для наполнения массива задача  1, 2, 3 --------
 
 int[] GetArray (int size, int minVal, int maxVal)
 {
