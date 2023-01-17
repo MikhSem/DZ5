@@ -54,17 +54,23 @@ int[] array3 = GetArray(sizemas2, minValue2, maxValue2+1);
 
 Console.WriteLine ($"[{String.Join (" / ", array3)}]");
 
-
-int countmasFinal = sizemas2 / 2; // понятно что ошибка здесь, т.к. размер массива целочеисленное деление и при нечтеном исходном не получим верного
-
-int[] arrayFinal  = new int[countmasFinal];
-
-   for (int i = 0; i < countmasFinal; i++ )
+int a = 0;
+if (sizemas2 % 2 == 0) 
 {
-    arrayFinal [i] = array3[i] * array3 [sizemas2 - 1 -i];
+ a  = sizemas2 / 2;
+}
+else a = sizemas2 / 2 + 1;
+
+int[] arrayFinal = new int[a];
+
+for (int i = 0; i < a; i++)
+
+{
+    arrayFinal [i] = array3 [i] * array3 [(sizemas2 - 1 - i)];
 }
 
-Console.WriteLine ($"[{String.Join (" / ", arrayFinal)}]");
+
+ Console.WriteLine ($"[{String.Join (" / ", arrayFinal)}]");
 
 
 // ------ Метод задача  1, 2, 3 --------
